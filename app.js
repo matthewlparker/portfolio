@@ -9,4 +9,4 @@ function Project(title, description, img, src){
 
 var projects = [];
 
-new Project('Guardians of the Goats', 'goats in need deserver a guardian indeed', img, src);
+// new Project('Guardians of the Goats', 'goats in need deserve a guardian indeed', img, src);

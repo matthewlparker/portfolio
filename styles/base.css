@@ -13,4 +13,45 @@ global styles reset*/
   margin: 0;
   width: 100%;
   box-sizing: border-box;
+  border: 1px solid blue;
+}
+
+html, body {
+  height: 100%;
+}
+
+main {
+  height: 100%;
+}
+
+header {
+  padding-bottom: 20px;
+}
+
+h1 {
+  display: inline-block;
+  font-size: 3em;
+}
+
+li {
+  display: inline;
+  font-size: 2em;
+  padding: 0 2% 0 2%;
+}
+
+.site-navigation {
+}
+
+.toggleMenu {
+  display: none;
+  width: auto;
+}
+
+.nav-ul {
+  display: inline-block;
+}
+
+.icon-menu:before {
+  content: "\e9bd";
+  display: none;
 }
