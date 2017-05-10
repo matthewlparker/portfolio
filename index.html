@@ -1,27 +1,40 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel="stylesheet" href="styles/base.css" />
-    <link rel="stylesheet" href="styles/state.css" />
-    <link rel="stylesheet" href="styles/icons.css" />
-    <link rel="stylesheet" href="styles/layout.css" />
-    <link rel="stylesheet" href="styles/modules.css" />
-  </head>
-  <body>
-      <header>
-        <h1 class="title">Matthew Parker</h1>
-        <nav class="site-navigation">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles/base.css" />
+  <link rel="stylesheet" href="styles/state.css" />
+  <link rel="stylesheet" href="styles/icons.css" />
+  <link rel="stylesheet" href="styles/layout.css" />
+  <link rel="stylesheet" href="styles/modules.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1 class="title">Matthew Parker</h1>
+    <nav class="site-navigation">
 
-          <div class="toggleMenu">Menu<span class="icon-menu"></span></div>
-          <ul class="nav-ul">
-            <li class="nav-home">Work</li>
-            <li class="nav-about">About Me</li>
-            <li class="nav-contact">Contact</li>
-          </ul>
-        </nav>
-      </header>
-    <main>
-    </main>
-    <script src="app.js"></script>
-  </body>
+      <div class="toggleMenu">Menu<span class="icon-menu"></span></div>
+      <ul class="nav-ul">
+        <li class="nav-home">Work</li>
+        <li class="nav-about">About Me</li>
+        <li class="nav-contact">Contact</li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section id="projects">
+      <article class="template">
+        <header>
+          <h3>Title</h3>
+          <div class="byline">
+            By <h4><a href="">Author Name</a></h4>
+          </div>
+        </header>
+        <section class="project-body"></section>
+      </article>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
 </html>
