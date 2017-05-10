@@ -1,0 +1,27 @@
+/*State rules are ways to describe how our modules or layouts will look when in a particular state. Is it hidden or expanded? Is it active or inactive? They are about describing how a module or layout looks on screens that are smaller or bigger. They are also about describing how a module might look in different views like the home page or the inside page.*/
+
+@media only screen and (min-width : 320px) and (max-width : 480px) {
+  .toggleMenu {
+    display: inline-block;
+  }
+  .nav-ul {
+    display: none;
+  }
+
+  .site-navigation {
+    padding-top: 20px;
+  }
+
+  .site-navigation:hover ul, li {
+    display: block;
+  }
+  .icon-menu:before {
+    content: "\e9bd";
+    display: inline-block;
+    font-size: 2.5em;
+    float: right;
+  }
+  .toggleMenu {
+    font-size: 2em;
+  }
+}
