@@ -28,7 +28,6 @@
   .template {
     display: inline-block;
     max-width: 400px;
-    /*min-width: 300px;*/
-    /*margin: 0 10% 0 10%;*/
+    min-width: 307.2px;
   }
 }

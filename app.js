@@ -17,13 +17,15 @@ Project.prototype.toHTML = function(){
 }
 
 $(document).ready(function(){
+  $('section').hide();
+  $('#projects-page').show();
   new Project('Guardians of the Goats','https://cadburylion.github.io/', 'images/GoG.png', 'goats in need deserve a guardian indeed').toHTML()
 })
 
 $('.nav-ul li').on('click', function(){
   $('section').hide();
   if ($(this).hasClass('nav-about')) {
-    $('#about-me').fadeIn(350);
+    $('#about-me-page').fadeIn(350);
   } else if ($(this).hasClass('nav-home')) {
     $('#projects-page').fadeIn(350);
   } else if ($(this).hasClass('nav-contact')) {
