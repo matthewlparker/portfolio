@@ -29,5 +29,6 @@
     display: inline-block;
     max-width: 400px;
     min-width: 307.2px;
+    margin: 25px 0 0 25px;
   }
 }
