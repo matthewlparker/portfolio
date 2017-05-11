@@ -7,7 +7,17 @@
   <link rel="stylesheet" href="styles/icons.css" />
   <link rel="stylesheet" href="styles/layout.css" />
   <link rel="stylesheet" href="styles/modules.css" />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <script id="project-template" type="text/x-handlebars-template">
+        <h3>{{title}}</h3>
+        <a href={{src}}><img class="project-image" src={{image}}/></a>
+        <h4>{{description}}</h4>
+      </script>
+
+      <!-- <h3>Guardians of the Goats<h3>
+      <a class="project-src" href="https://cadburylion.github.io/"><img class="project-image" src="images/GoG.png"/></a>
+      <h4>Goats in need deserve a guardian indeed</h4> -->
+
 </head>
 <body>
   <header>
@@ -24,8 +34,22 @@
     </nav>
   </header>
   <main>
+    <section id="projects">
 
-    <section id="projects-page">
+
+
+
+
+
+
+    </section>
+
+
+
+
+
+
+    <!-- <section id="projects-page">
       <article class="template">
         <header>
           <h3 class="project-title">Title</h3>
@@ -37,7 +61,7 @@
 
         <section class="project-body"></section>
       </article>
-    </section>
+    </section> -->
 
     <section id="about-me-page"> Information about me will go here!
     </section>
@@ -46,6 +70,9 @@
     </section>
 
   </main>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
+  <script src="appData.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
