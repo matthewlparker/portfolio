@@ -2,18 +2,13 @@
 
 // var neighborhoods = [];
 //
-// // REVIEW: This is another way to use a constructor to duplicate an array of raw data objects
-// function Neighborhood (rawDataObject) {
-//   for (key in rawDataObject) {
-//     this[key] = rawDataObject[key];
-//   }
-// };
+//
 
 
 var projects = [];
 
 function Project(rawDataObject) {
-  for (key in rawDataObject) {
+  for (var key in rawDataObject) {
     this[key] = rawDataObject[key];
   }
 }
