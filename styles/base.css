@@ -13,45 +13,51 @@ global styles reset*/
   margin: 0;
   width: 100%;
   box-sizing: border-box;
-  border: 1px solid blue;
 }
 
 html, body {
   height: 100%;
+  background-color: beige;
 }
 
 main {
   height: 100%;
 }
 
-header {
-  padding-bottom: 20px;
-}
-
 h1 {
   display: inline-block;
   font-size: 3em;
-}
-
-li {
-  display: inline;
-  font-size: 2em;
-  padding: 0 2% 0 2%;
-}
-
-.site-navigation {
+  margin: 25px 0 0 25px;
 }
 
 .toggleMenu {
-  display: none;
-  width: auto;
+  margin: 0 0 0 15px;
 }
 
 .nav-ul {
-  display: inline-block;
+  display: none;
+  font-size: 1.8em;
+  margin: 0 0 0 25px;
+}
+
+.site-navigation {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #333;
+}
+
+.site-navigation:hover ul, li {
+  display: block;
 }
 
 .icon-menu:before {
   content: "\e9bd";
-  display: none;
+  display: inline-block;
+  font-size: 1.2em;
+  margin: 0 30px 0 0;
+  float: right;
+}
+
+.toggleMenu {
+  font-size: 2.3em;
 }
