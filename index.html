@@ -7,8 +7,17 @@
   <link rel="stylesheet" href="styles/icons.css" />
   <link rel="stylesheet" href="styles/layout.css" />
   <link rel="stylesheet" href="styles/modules.css" />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <script id="project-template" type="text/x-handlebars-template">
+    <article class="project">
+      <h3>{{title}}</h3>
+      <a href="{{src}}"><img class="project-image" src="{{image}}"/></a>
+      <h4>{{description}}</h4>
+    </article>
+  </script>
+
 </head>
+
 <body>
   <header>
     <h1 class="title">Matthew Parker</h1>
@@ -24,20 +33,10 @@
     </nav>
   </header>
   <main>
+    <section id="projects">
 
-    <section id="projects-page">
-      <article class="template">
-        <header>
-          <h3 class="project-title">Title</h3>
-        </header>
-        <a class="project-src" href=""><img class="project-image" src="" /></a>
-        <div class="project-description">
-          <h4>Project Description</h4>
-        </div>
-
-        <section class="project-body"></section>
-      </article>
     </section>
+
 
     <section id="about-me-page"> Information about me will go here!
     </section>
@@ -45,7 +44,10 @@
     <section id="contact-page"> Contact information will go here!
     </section>
 
-  </main>
-  <script src="app.js"></script>
+</main>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
+<script src="appData.js"></script>
+<script src="app.js"></script>
 </body>
 </html>

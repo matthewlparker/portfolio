@@ -1,5 +1,5 @@
 /*Modules are the reusable, modular parts of our design. They are the callouts, the sidebar sections, the product lists and so on.*/
-.template {
+.project {
   display: inline-block;
   width: 80%;
   margin: 25px 10% 0 10%;
@@ -11,11 +11,3 @@
 .project-image {
   width: 100%;
 }
-
-/*.project-tile {
-  background-color: #ccc;
-}
-
-.project-description {
-  background-color: #ccc;
-}*/
