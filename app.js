@@ -12,6 +12,8 @@ function Project(projectData){
 Project.prototype.toHTML = function(){
   var $newProject = $('article.template').clone();
 
+  $newProject.removeClass('template');
+
   $newProject.find('.project-title').html(this.title);
   $newProject.find('.project-src').attr('href', this.src);
   $newProject.find('.project-image').attr('src', this.image);
