@@ -3,15 +3,16 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="styles/base.css" />
+  <link rel="stylesheet" href="styles/modules.css" />
   <link rel="stylesheet" href="styles/state.css" />
   <link rel="stylesheet" href="styles/icons.css" />
   <link rel="stylesheet" href="styles/layout.css" />
-  <link rel="stylesheet" href="styles/modules.css" />
 
   <script id="project-template" type="text/x-handlebars-template">
     <article class="project">
       <h3>{{title}}</h3>
-      <a href="{{src}}"><img class="project-image" src="{{image}}"/></a>
+      <!-- Justin added "target="#_blank" to my a element so my link would open on a new tab -->
+      <a target ="#_blank" href="{{src}}"><img class="project-image" src="{{image}}"/></a>
       <h4>{{description}}</h4>
     </article>
   </script>

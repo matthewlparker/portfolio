@@ -1,6 +1,11 @@
 'use strict';
 
+// Justin pointed out I should move my projects variable out of the global namespace
+// by attaching it as a methond to my Project constructor
+
 var projects = [];
+
+// Justin brought up let versus var and how I should change my code to use let instead.
 
 function Project(rawDataObject) {
   for (var key in rawDataObject) {
