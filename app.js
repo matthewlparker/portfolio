@@ -3,12 +3,12 @@
 // Justin pointed out I should move my projects variable out of the global namespace
 // by attaching it as a methond to my Project constructor
 
-var projects = [];
+let projects = [];
 
-// Justin brought up let versus var and how I should change my code to use let instead.
+// Justin brought up let versus let and how I should change my code to use let instead.
 
 function Project(rawDataObject) {
-  for (var key in rawDataObject) {
+  for (let key in rawDataObject) {
     this[key] = rawDataObject[key];
   }
 }
@@ -16,11 +16,10 @@ function Project(rawDataObject) {
 
 Project.prototype.toHtml = function() {
   // REVIEW: This method on each instance of Project allows that object to create its own HTML
-  // TODO: Complete this using Handlebars!!!
   // 1. Get the template from the HTML document
-  var template = $('#project-template').html();
+  let template = $('#project-template').html();
   // 2. Use Handlebars to "compile" the HTML
-  var templateRender = Handlebars.compile(template);
+  let templateRender = Handlebars.compile(template);
   // 3. Do not forget to return the HTML from this method
   return templateRender(this);
 };
@@ -57,6 +56,9 @@ Project.initProjectPage = function (){
 }
 
 Project.loadAll = function(rawData) {
+
+  // Keeping the commented out code below for future reference
+
   // rawData.sort(function(a,b) {
   //   return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
   // });
@@ -71,20 +73,19 @@ Project.loadAll = function(rawData) {
 Project.fetchAll = function() {
   if (localStorage.rawData) {
     // When rawData is already in localStorage,
-    // we can load it with the .loadAll function above,
-    // and then render the index page (using the proper method on the articleView object).
-    Project.loadAll(JSON.parse(localStorage.rawData)); //TODO: What do we pass in to loadAll()?
-    //TODO: What method do we call to render the index page?
-    // articleView.initIndexPage(localStorage.rawData);
-
-    Project.initProjectPage();
+    // we can load it with the .loadAll method above,
+    // and then render the project page (using the proper method on the Project object).
+    Project.loadAll(JSON.parse(localStorage.rawData));
+    // articleView.initIndexPage(localStorage.rawData); <-- Keeping for reference
+    //Method called to render the project page
+    Project.initProjectPage(); // <-- This works without an argument?
 
   } else {
-    // TODO: When we don't already have the rawData,
-    // we need to retrieve the JSON file from the server with AJAX (which jQuery method is best for this?),
-    // cache it in localStorage so we can skip the server call next time,
-    // then load all the data into Project.all with the .loadAll function above,
-    // and then render the index page.
+    // If we don't already have the rawData, we retrieve it from mthe JSON file
+    // from the server with AJAX (using $.getJSON()), then cache it in localStorage
+    // so we can skip the server call next time (and speed things up),
+    // then load all the data into the projects array with the Project.loadAll method
+    // and then render the project page.
     $.getJSON('/projectData.json')
       .then(function(data){
         localStorage.rawData = JSON.stringify(data);
