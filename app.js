@@ -7,7 +7,8 @@ var app = app || {};
 
   // Justin brought up let versus var and how I should change my code to use let instead.
 (function(app) {
-  let projects = [];
+
+  Project.all = [];
 
   function Project(rawDataObject) {
     for (let key in rawDataObject) {
@@ -24,10 +25,6 @@ var app = app || {};
     // 3. Do not forget to return the HTML from this method
     return templateRender(this);
   };
-
-  projects.forEach(function(myNewProjectObject){
-    $('#projects').append(myNewProjectObject.toHtml());
-  });
 
   $(document).ready(function(){
     $('section').hide();
@@ -46,17 +43,31 @@ var app = app || {};
   });
 
   Project.initProjectPage = function (){
-    projects.forEach(function(myNewProjectObject){
+    Project.all.forEach(function(myNewProjectObject){
       $('#projects').append(myNewProjectObject.toHtml());
     });
   }
 
   Project.loadAll = function(rawData) {
 
-
-    rawData.forEach(function(object) {
-      projects.push(new app.Project(object));
+    Project.all = rawData.map(function(project) {
+      return new Project(project);
     })
+
+    console.table(Project.all);
+
+    console.log(`Fun fact! There are: ${Project.all.map(function(project){
+      return project.description.split(' ').length;
+    }).reduce(function(acc, curr){
+      return acc + curr;
+    })} total words in all my project descriptions combined!`)
+
+
+  // Leaving the following code in for review:
+
+  //   rawData.forEach(function(object) {
+  //     Project.all.push(new app.Project(object));
+  //   })
   }
 
   // This function will retrieve the data from either a local or remote source,
@@ -67,6 +78,7 @@ var app = app || {};
       // we can load it with the .loadAll method above,
       // and then render the project page (using the proper method on the Project object).
       Project.loadAll(JSON.parse(localStorage.rawData));
+
       // articleView.initIndexPage(localStorage.rawData); <-- Keeping for reference
       // Method called to render the project page
       Project.initProjectPage();
