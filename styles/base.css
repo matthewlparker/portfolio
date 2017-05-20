@@ -56,7 +56,6 @@ li {
 
 .site-navigation:hover ul, li {
   display: block;
-  /*color: white;*/
 }
 
 .icon-menu:before {

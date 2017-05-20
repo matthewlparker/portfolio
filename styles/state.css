@@ -24,7 +24,6 @@ and on tablets*/
     display: inline;
   }
   .site-navigation:hover ul, li {
-    /*color: white;*/
   }
   .toggleMenu {
     display: none;

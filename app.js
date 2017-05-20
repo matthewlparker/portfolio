@@ -5,14 +5,13 @@
 
 let projects = [];
 
-// Justin brought up let versus let and how I should change my code to use let instead.
+// Justin brought up let versus var and how I should change my code to use let instead.
 
 function Project(rawDataObject) {
   for (let key in rawDataObject) {
     this[key] = rawDataObject[key];
   }
 }
-
 
 Project.prototype.toHtml = function() {
   // REVIEW: This method on each instance of Project allows that object to create its own HTML
@@ -23,10 +22,6 @@ Project.prototype.toHtml = function() {
   // 3. Do not forget to return the HTML from this method
   return templateRender(this);
 };
-
-// projectDataSets.forEach(function(projectObject) {
-//   projects.push(new Project(projectObject));
-// });
 
 projects.forEach(function(myNewProjectObject){
   $('#projects').append(myNewProjectObject.toHtml());
@@ -50,18 +45,12 @@ $('.nav-ul li').on('click', function(){
 
 Project.initProjectPage = function (){
   projects.forEach(function(myNewProjectObject){
-    console.log(myNewProjectObject, 'myNewProjectObject');
     $('#projects').append(myNewProjectObject.toHtml());
   });
 }
 
 Project.loadAll = function(rawData) {
 
-  // Keeping the commented out code below for future reference
-
-  // rawData.sort(function(a,b) {
-  //   return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
-  // });
 
   rawData.forEach(function(object) {
     projects.push(new Project(object));
@@ -77,8 +66,8 @@ Project.fetchAll = function() {
     // and then render the project page (using the proper method on the Project object).
     Project.loadAll(JSON.parse(localStorage.rawData));
     // articleView.initIndexPage(localStorage.rawData); <-- Keeping for reference
-    //Method called to render the project page
-    Project.initProjectPage(); // <-- This works without an argument?
+    // Method called to render the project page
+    Project.initProjectPage();
 
   } else {
     // If we don't already have the rawData, we retrieve it from mthe JSON file
@@ -90,7 +79,6 @@ Project.fetchAll = function() {
       .then(function(data){
         localStorage.rawData = JSON.stringify(data);
         Project.loadAll(data);
-        // articleView.initIndexPage();
         Project.initProjectPage();
       },
       function(err){
