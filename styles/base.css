@@ -17,7 +17,7 @@ global styles reset*/
 
 html, body {
   height: 100%;
-  background-color: beige;
+  background-color: #b6b4b5;
 }
 
 main {
@@ -32,6 +32,10 @@ h1 {
 
 li {
   cursor: pointer; cursor: hand;
+}
+
+.title {
+  color: white;
 }
 
 .toggleMenu {

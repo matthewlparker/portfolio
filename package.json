@@ -1,0 +1,27 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Matthew Parker's Portfolio",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cadburylion/portfolio.git"
+  },
+  "keywords": [
+    "portfolio"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Cadburylion/portfolio/issues"
+  },
+  "homepage": "https://github.com/Cadburylion/portfolio#readme",
+  "dependencies": {
+    "express": "^4.15.3",
+    "expresss": "0.0.0"
+  }
+}

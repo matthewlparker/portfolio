@@ -11,7 +11,6 @@
   <script id="project-template" type="text/x-handlebars-template">
     <article class="project">
       <h3>{{title}}</h3>
-      <!-- Justin added "target="#_blank" to my a element so my link would open on a new tab -->
       <a target ="#_blank" href="{{src}}"><img class="project-image" src="{{image}}"/></a>
       <h4>{{description}}</h4>
     </article>
@@ -48,7 +47,9 @@
 </main>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
-<script src="appData.js"></script>
 <script src="app.js"></script>
+<script>
+  app.Project.fetchAll(app.Project.initProjectPage);
+</script>
 </body>
 </html>
