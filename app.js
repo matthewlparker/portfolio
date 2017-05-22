@@ -68,6 +68,8 @@ var app = app || {};
   //   rawData.forEach(function(object) {
   //     Project.all.push(new app.Project(object));
   //   })
+
+  //Matthew, I think the above code doesn't needs to be included... the fact that you used .map() that is taking the place of forEach method... Not necessary and I believe this can be thrown out... Refer to labs 09 and 10 and we are just using map()
   }
 
   // This function will retrieve the data from either a local or remote source,
@@ -102,3 +104,5 @@ var app = app || {};
   }
   app.Project = Project;
 })(app)
+
+//great job on wrapping all of this!!
