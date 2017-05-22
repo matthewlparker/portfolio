@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="styles/state.css" />
   <link rel="stylesheet" href="styles/icons.css" />
   <link rel="stylesheet" href="styles/layout.css" />
+  <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
 
   <script id="project-template" type="text/x-handlebars-template">
     <article class="project">
@@ -14,6 +15,8 @@
       <a target ="#_blank" href="{{src}}"><img class="project-image" src="{{image}}"/></a>
       <h4>{{description}}</h4>
     </article>
+
+
   </script>
 
 </head>
@@ -26,28 +29,31 @@
       <div class="toggleMenu">Menu<span class="icon-menu"></span></div>
 
       <ul class="nav-ul">
-        <li class="nav-home">Projects</li>
-        <li class="nav-about">About Me</li>
-        <li class="nav-contact">Contact</li>
+        <li class="nav-home"><a href="/">Projects</a></li>
+        <li class="nav-about"><a href="/about">About Me</a></li>
+        <li class="nav-contact"><a href="/contact">Contact</a></li>
       </ul>
     </nav>
   </header>
   <main>
-    <section id="projects">
-
+    <section id="projects" class="tab-content">
     </section>
 
 
-    <section id="about-me-page"> Information about me will go here!
+    <section id="about-me-page" class="tab-content"> Information about me will go here!
     </section>
 
-    <section id="contact-page"> Contact information will go here!
+    <section id="contact-page" class="tab-content"> Contact information will go here!
     </section>
 
 </main>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
 <script src="app.js"></script>
+<script src="projectController.js"></script>
+<script src="aboutController.js"></script>
+<script src="contactController.js"></script>
+<script src="route.js"></script>
 <script>
   app.Project.fetchAll(app.Project.initProjectPage);
 </script>

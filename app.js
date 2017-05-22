@@ -31,16 +31,20 @@ var app = app || {};
     $('#projects').show();
   });
 
-  $('.nav-ul li').on('click', function(){
-    $('section').hide();
-    if ($(this).hasClass('nav-about')) {
-      $('#about-me-page').fadeIn(350);
-    } else if ($(this).hasClass('nav-home')) {
-      $('#projects').fadeIn(350);
-    } else if ($(this).hasClass('nav-contact')) {
-      $('#contact-page').fadeIn(350);
-    }
-  });
+
+  // Keep this for reference -- this is what I was able to delete
+  // by using page.js and routes
+
+  // $('.nav-ul li').on('click', function(){
+  //   $('section').hide();
+  //   if ($(this).hasClass('nav-about')) {
+  //     $('#about-me-page').fadeIn(350);
+  //   } else if ($(this).hasClass('nav-home')) {
+  //     $('#projects').fadeIn(350);
+  //   } else if ($(this).hasClass('nav-contact')) {
+  //     $('#contact-page').fadeIn(350);
+  //   }
+  // });
 
   Project.initProjectPage = function (){
     Project.all.forEach(function(myNewProjectObject){

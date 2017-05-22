@@ -1,4 +1,4 @@
-s'use strict';
+'use strict';
 
 var projectDataSets = [
   {
