@@ -11,7 +11,6 @@ var app = app || {};
   contactController.initContact = function(){
     $('.tab-content').hide();
     $('#contact-page').fadeIn(350);
-    console.log('init about');
   }
 
   module.contactController = contactController;

@@ -11,7 +11,6 @@ var app = app || {};
   projectController.initProject = function(){
     $('.tab-content').hide();
     $('#projects').fadeIn(350);
-    console.log('init projects');
   }
 
   module.projectController = projectController;

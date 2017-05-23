@@ -11,7 +11,6 @@ var app = app || {};
   aboutController.initAbout = function(){
     $('.tab-content').hide();
     $('#about-me-page').fadeIn(350);
-    console.log('init about');
   }
 
   module.aboutController = aboutController;

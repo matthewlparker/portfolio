@@ -13,6 +13,7 @@ global styles reset*/
   margin: 0;
   width: 100%;
   box-sizing: border-box;
+  text-decoration: none;
 }
 
 html, body {
@@ -32,6 +33,15 @@ h1 {
 
 li {
   cursor: pointer; cursor: hand;
+}
+
+a:hover {
+  color: white;
+}
+
+a:visited {
+  text-decoration: none;
+  color: black;
 }
 
 .title {
