@@ -13,5 +13,7 @@ var app = app || {};
     $('#about-me-page').fadeIn(350);
   }
 
+  app.repos.requestRepos(app.repoView.index);
+
   module.aboutController = aboutController;
 })(app);
