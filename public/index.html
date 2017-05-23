@@ -2,11 +2,11 @@
 <html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="styles/base.css" />
-  <link rel="stylesheet" href="styles/modules.css" />
-  <link rel="stylesheet" href="styles/state.css" />
-  <link rel="stylesheet" href="styles/icons.css" />
-  <link rel="stylesheet" href="styles/layout.css" />
+  <link rel="stylesheet" href="./styles/base.css" />
+  <link rel="stylesheet" href="./styles/modules.css" />
+  <link rel="stylesheet" href="./styles/state.css" />
+  <link rel="stylesheet" href="./styles/icons.css" />
+  <link rel="stylesheet" href="./styles/layout.css" />
   <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
 
   <script id="project-template" type="text/x-handlebars-template">
@@ -49,11 +49,13 @@
 </main>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
-<script src="app.js"></script>
-<script src="projectController.js"></script>
-<script src="aboutController.js"></script>
-<script src="contactController.js"></script>
-<script src="route.js"></script>
+<script src="./scripts/views/app.js"></script>
+<script src="./scripts/models/appData.js"></script>
+
+<script src="./scripts/controllers/projectController.js"></script>
+<script src="./scripts/controllers/aboutController.js"></script>
+<script src="./scripts/controllers/contactController.js"></script>
+<script src="./scripts/controllers/route.js"></script>
 <script>
   app.Project.fetchAll(app.Project.initProjectPage);
 </script>
