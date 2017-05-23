@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./styles/base.css" />
+  <link rel="stylesheet" href="./styles/modules.css" />
+  <link rel="stylesheet" href="./styles/state.css" />
+  <link rel="stylesheet" href="./styles/icons.css" />
+  <link rel="stylesheet" href="./styles/layout.css" />
+  <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
+
+  <script id="project-template" type="text/x-handlebars-template">
+    <article class="project">
+      <h3>{{title}}</h3>
+      <a target ="#_blank" href="{{src}}"><img class="project-image" src="{{image}}"/></a>
+      <h4>{{description}}</h4>
+    </article>
+
+
+  </script>
+
+</head>
+
+<body>
+  <header>
+    <h1 class="title">Matthew Parker</h1>
+    <nav class="site-navigation">
+
+      <div class="toggleMenu">Menu<span class="icon-menu"></span></div>
+
+      <ul class="nav-ul">
+        <li class="nav-home"><a href="/">Projects</a></li>
+        <li class="nav-about"><a href="/about">About Me</a></li>
+        <li class="nav-contact"><a href="/contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section id="projects" class="tab-content">
+    </section>
+
+
+    <section id="about-me-page" class="tab-content"> Information about me will go here!
+    </section>
+
+    <section id="contact-page" class="tab-content"> Contact information will go here!
+    </section>
+
+</main>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
+<script src="./scripts/views/app.js"></script>
+<script src="./scripts/models/appData.js"></script>
+
+<script src="./scripts/controllers/projectController.js"></script>
+<script src="./scripts/controllers/aboutController.js"></script>
+<script src="./scripts/controllers/contactController.js"></script>
+<script src="./scripts/controllers/route.js"></script>
+<script>
+  app.Project.fetchAll(app.Project.initProjectPage);
+</script>
+</body>
+</html>

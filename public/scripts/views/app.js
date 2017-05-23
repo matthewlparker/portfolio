@@ -31,16 +31,20 @@ var app = app || {};
     $('#projects').show();
   });
 
-  $('.nav-ul li').on('click', function(){
-    $('section').hide();
-    if ($(this).hasClass('nav-about')) {
-      $('#about-me-page').fadeIn(350);
-    } else if ($(this).hasClass('nav-home')) {
-      $('#projects').fadeIn(350);
-    } else if ($(this).hasClass('nav-contact')) {
-      $('#contact-page').fadeIn(350);
-    }
-  });
+
+  // Keep this for reference -- this is what I was able to delete
+  // by using page.js and routes
+
+  // $('.nav-ul li').on('click', function(){
+  //   $('section').hide();
+  //   if ($(this).hasClass('nav-about')) {
+  //     $('#about-me-page').fadeIn(350);
+  //   } else if ($(this).hasClass('nav-home')) {
+  //     $('#projects').fadeIn(350);
+  //   } else if ($(this).hasClass('nav-contact')) {
+  //     $('#contact-page').fadeIn(350);
+  //   }
+  // });
 
   Project.initProjectPage = function (){
     Project.all.forEach(function(myNewProjectObject){
@@ -89,7 +93,7 @@ var app = app || {};
       // so we can skip the server call next time (and speed things up),
       // then load all the data into the projects array with the Project.loadAll method
       // and then render the project page.
-      $.getJSON('/projectData.json')
+      $.getJSON('/public/data/projectData.json')
         .then(function(data){
           localStorage.rawData = JSON.stringify(data);
           Project.loadAll(data);
