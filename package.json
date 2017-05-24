@@ -22,6 +22,7 @@
   "homepage": "https://github.com/Cadburylion/portfolio#readme",
   "dependencies": {
     "express": "^4.15.3",
+    "express-request-proxy": "^2.0.0",
     "expresss": "0.0.0"
   }
 }
