@@ -93,7 +93,7 @@ var app = app || {};
       // so we can skip the server call next time (and speed things up),
       // then load all the data into the projects array with the Project.loadAll method
       // and then render the project page.
-      $.getJSON('/public/data/projectData.json')
+      $.getJSON('/data/projectData.json')
         .then(function(data){
           localStorage.rawData = JSON.stringify(data);
           Project.loadAll(data);
