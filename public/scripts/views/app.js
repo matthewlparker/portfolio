@@ -27,7 +27,7 @@ var app = app || {};
   };
 
   $(document).ready(function(){
-    $('section').hide();
+    $('.tab-content').hide();
     $('#projects').show();
   });
 

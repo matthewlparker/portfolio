@@ -15,9 +15,22 @@
       <a target ="#_blank" href="{{src}}"><img class="project-image" src="{{image}}"/></a>
       <h4>{{description}}</h4>
     </article>
-
-
   </script>
+
+  <script id="repo-template" type="text/x-handlebars-template">
+      <li>
+        <a href="{{html_url}}" target="_blank">
+          <h3>{{name}}</h3>
+        </a>
+        <p>Description: {{description}}</p>
+        <p>Language: {{language}}</p>
+        <p>Created: {{created_at}}</p>
+        <p>Last updated: {{updated_at}}</p>
+        {{#if watchers_count}}
+          <p>{{watchers_count}} watching this repo</p>
+        {{/if}}
+      </li>
+    </script>
 
 </head>
 
@@ -41,20 +54,39 @@
 
 
     <section id="about-me-page" class="tab-content"> Information about me will go here!
+      <section id="about" class="tab-content">
+          <header>
+          </header>
+          <section>
+            <h1>My GitHub Repositories:</h1>
+            <ul>
+              <li>Coding</li>
+              <li>Sharing what I've learned</li>
+              <li>Hanging with my family</li>
+            </ul>
+          </section>
+        </section>
     </section>
 
     <section id="contact-page" class="tab-content"> Contact information will go here!
     </section>
 
+
+
+
 </main>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
-<script src="./scripts/views/app.js"></script>
+<script src="./scripts/models/githubToken.js"></script>
+<script src="./scripts/models/repo.js"></script>
 <script src="./scripts/models/appData.js"></script>
 
+<script src="./scripts/views/app.js"></script>
+<script src="./scripts/views/repoView.js"></script>
+
 <script src="./scripts/controllers/projectController.js"></script>
-<script src="./scripts/controllers/aboutController.js"></script>
 <script src="./scripts/controllers/contactController.js"></script>
+<script src="./scripts/controllers/aboutController.js"></script>
 <script src="./scripts/controllers/route.js"></script>
 <script>
   app.Project.fetchAll(app.Project.initProjectPage);
