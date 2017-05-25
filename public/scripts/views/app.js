@@ -31,7 +31,6 @@ var app = app || {};
     $('#projects').show();
   });
 
-
   // Keep this for reference -- this is what I was able to delete
   // by using page.js and routes
 
