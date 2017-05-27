@@ -18,7 +18,7 @@ var app = app || {};
       url: 'https://api.github.com/user/repos',
       method:'GET',
       headers: {
-        Authorization: myGitHubToken
+        Authorization: `token ${myGitHubToken}`
       }
     })
     .then(data => {
