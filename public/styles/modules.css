@@ -1,4 +1,11 @@
-/*Modules are the reusable, modular parts of our design. They are the callouts, the sidebar sections, the product lists and so on.*/
+* {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
 .project {
   display: inline-block;
   width: 80%;
