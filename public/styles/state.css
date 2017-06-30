@@ -1,9 +1,12 @@
-/*State rules are ways to describe how our modules or layouts will look when in a particular state. Is it hidden or expanded? Is it active or inactive? They are about describing how a module or layout looks on screens that are smaller or bigger. They are also about describing how a module might look in different views like the home page or the inside page.*/
-
-/*Justin pointed out that I should work on my media query sizes to work better on landscape on phones
-and on tablets*/
-
 @media only screen and (min-width : 640px) {
+  * {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+    text-decoration: none;
+  }
+  
   h1 {
     display: inline-block;
     font-size: 3em;
@@ -40,5 +43,4 @@ and on tablets*/
     background-color: #ccc;
     border: 1px solid black;
   }
-
 }
